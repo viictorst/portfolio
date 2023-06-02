@@ -57,3 +57,27 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+function mostrarQuadrado() {
+    var sobreposicao = document.getElementById("sobreposicao");
+
+    document.getElementById("quadrado").style.display = "block";
+    document.getElementById("sobreposicao").style.display = "block";
+    document.getElementById("sobreposicao").classList.add('borrar');
+    document.body.style.overflow = "hidden"; // Permite rolagem da página
+    sobreposicao.addEventListener("click", bloquearToque);
+
+    setTimeout(function() {
+            document.getElementById("quadrado").style.display ='none';
+            document.getElementById("sobreposicao").classList.remove('borrar');
+            document.body.style.overflow = "auto"; // Permite rolagem da página
+        }, 15000
+    )
+
+}
+
+function fecharQuadrado() {
+    document.getElementById("quadrado").style.display = "none";
+    document.getElementById("sobreposicao").style.display = "none";
+    document.body.style.overflow = "auto"; // Permite rolagem da página
+}

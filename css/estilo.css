@@ -19,8 +19,8 @@ Cores
 }
 
 :root {
-    --bg-color: #333333;
-    --second-bg-color: #363636;
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #00d2df;
 }
@@ -49,7 +49,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .header.sticky {
@@ -220,6 +220,59 @@ span {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+
+.quadrado {
+    width: 60%;
+    height: 60%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+    border-radius: 1.6rem;
+    padding: 20px;
+    z-index: 9999; /* Define a ordem de sobreposição */
+}
+
+.sobreposicao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998; /* Define a ordem de sobreposição abaixo do quadrado */
+    pointer-events: none; /* Impede interações com elementos da página */
+}
+
+.borrar{
+    backdrop-filter: blur(7px);
+}
+
+/* Estilos CSS para o ícone */
+.icone {
+    font-size: 30px;
+    color: var(--main-color);
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Estilos CSS para o texto */
+.conteudo {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.conteudo button {
+    margin-bottom: 0;
+}
+
+
+
 
 .services h2 {
     margin-bottom: 5rem;
