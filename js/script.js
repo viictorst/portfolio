@@ -58,9 +58,7 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-
-
-
+// Animação imagem home
 var container = document.querySelector('.home-img');
 var img = document.getElementById('img');
 
