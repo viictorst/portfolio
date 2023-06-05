@@ -58,26 +58,24 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-function mostrarQuadrado() {
-    var sobreposicao = document.getElementById("sobreposicao");
 
-    document.getElementById("quadrado").style.display = "block";
-    document.getElementById("sobreposicao").style.display = "block";
-    document.getElementById("sobreposicao").classList.add('borrar');
-    document.body.style.overflow = "hidden"; // Permite rolagem da página
-    sobreposicao.addEventListener("click", bloquearToque);
 
-    setTimeout(function() {
-            document.getElementById("quadrado").style.display ='none';
-            document.getElementById("sobreposicao").classList.remove('borrar');
-            document.body.style.overflow = "auto"; // Permite rolagem da página
-        }, 15000
-    )
 
-}
+var container = document.querySelector('.home-img');
+var img = document.getElementById('img');
 
-function fecharQuadrado() {
-    document.getElementById("quadrado").style.display = "none";
-    document.getElementById("sobreposicao").style.display = "none";
-    document.body.style.overflow = "auto"; // Permite rolagem da página
-}
+container.addEventListener('mousemove', function(e) {
+  var rect = container.getBoundingClientRect();
+  var x = e.clientX - rect.left; // Coordenada X do mouse dentro do contêiner
+  var y = e.clientY - rect.top; // Coordenada Y do mouse dentro do contêiner
+  var centerX = rect.width / 2; // Coordenada X do centro do contêiner
+  var centerY = rect.height / 2; // Coordenada Y do centro do contêiner
+  var rotateX = -(y - centerY) / 10; // Cálculo do ângulo de rotação em X (negativo para inverter a direção)
+  var rotateY = (x - centerX) / 10; // Cálculo do ângulo de rotação em Y
+
+  img.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+});
+
+container.addEventListener('mouseout', function() {
+  img.style.transform = 'none'; // Redefine a transformação para o estado original
+});
