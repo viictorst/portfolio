@@ -8,6 +8,9 @@
         <meta name="description" content="Portfólio do desenvolvedor front-end Victor da Silva Teixeira">
         <meta name="keywords" content="portfolio, html, front-end, desenvolvimento, css, javascript">
 
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
         <!-- box icons -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
@@ -23,7 +26,7 @@
 
         <!-- Cabeçalho -->
         <header class="header">
-            <a href="#" class="logo"><img src="assets/logobranco.png" alt="</VS>" width="45px"></a>
+            <a href="#" class="logo"><img src="assets/logo.png" alt="</VS>" width="55px"></a>
 
             <i class="bx bx-menu" id="menu-icon"></i>
 
@@ -34,6 +37,8 @@
                 <a href="#portfolio"> Projetos </a>
                 <a href="#contact"> Contato </a>
             </nav>
+
+            <i class="bx bx-moon" id="darkMode-icon"></i>
         </header>
 
         <!-- Section Home -->
@@ -47,10 +52,13 @@
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/victorsilva-teixeira/" target="_blank"><i class="bx bxl-linkedin"></i></a>
                     <a href="https://github.com/viictorst" target="_blank"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.instagram.com/victorsilva.web/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.instagram.com/victorsilva.design/" target="_blank"><i class="bx bxl-instagram"></i></a>
                     <a href="https://contate.me/victorsilvat" target="_blank"><i class="bx bxl-whatsapp"></i></a>
                 </div>
                 <a href="assets/Currículo.PDF" download="" class="btn"> Download CV </a>
+            </div>
+
+            <div class="home-background">
             </div>
 
             <div class="home-img">
@@ -61,7 +69,7 @@
         <!-- Section Sobre -->
         <section class="about" id="about">
             <div class="about-img">
-                <img src="assets/logobranco.png" alt="">
+                <img src="assets/Eu.png" alt="">
             </div>
 
             <div class="about-content">
@@ -134,6 +142,43 @@
             </div>
         </section>
 
+        <!-- Feedbacks -->
+        <div class="feedback-container">
+            <h2 class="heading"> FeedBack dos <span> Clientes </span> </h2>
+
+            <div class="feedback-wrapper">
+                <div class="feedback-box mySwiper">
+                    <div class="feedback-content swiper-wrapper">
+                        <div class="feedback-slide swiper-slide">
+                            <img src="assets/logocomadesivo.png" alt="">
+                            <h3> Guilherme Coutinho </h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi voluptatibus aspernatur itaque error laborum. Qui beatae, eos asperiores nostrum unde placeat minus ut quibusdam obcaecati nihil ipsa dignissimos quaerat numquam.
+                            </p>
+                        </div>
+                        <div class="feedback-slide swiper-slide">
+                            <img src="assets/logocomadesivo.png" alt="">
+                            <h3> Guilherme Coutinho </h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi voluptatibus aspernatur itaque error laborum. Qui beatae, eos asperiores nostrum unde placeat minus ut quibusdam obcaecati nihil ipsa dignissimos quaerat numquam.
+                            </p>
+                        </div>
+                        <div class="feedback-slide swiper-slide">
+                            <img src="assets/logocomadesivo.png" alt="">
+                            <h3> Guilherme Coutinho </h3>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi voluptatibus aspernatur itaque error laborum. Qui beatae, eos asperiores nostrum unde placeat minus ut quibusdam obcaecati nihil ipsa dignissimos quaerat numquam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- Section Contato -->
         <section class="contact" id="contact">
             <h2 class="heading"> Entre em contato <span>Comigo!</span> </h2>
@@ -164,6 +209,8 @@
         </footer>
 
         <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
